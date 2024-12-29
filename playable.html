@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Logo & HOME Örneği</title>
+  <style>
+    /* Tüm elementlerin varsayılan boşluklarını sıfırla */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Sayfanın tamamını kaplayan arka plan resmi */
+    .bg-image {
+      position: fixed; 
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      background: url("img/addS/howToPlay.png") no-repeat center center;
+      background-size: cover;
+      z-index: -1; /* Arka planda kalmasını sağlar */
+    }
+
+    /* Logo + HOME kapsayıcısı */
+    .logo-container {
+      position: absolute; 
+      top: 20px; 
+      left: 20px;
+      text-align: center; /* İçindeki öğeleri ortalar (özellikle HOME yazısını) */
+    }
+
+    /* Link (logo + HOME) için temel düzen */
+    .logo-container a {
+      display: block;
+      text-decoration: none;  /* Alt çizgiyi kaldır */
+      color: #fff;            /* Varsayılan yazı rengi */
+    }
+
+    /* Logo resmi */
+    .logo-container img {
+      display: block; 
+      margin: 0 auto;   /* Logoyu yatayda ortalar */
+      width: 200px;     /* Logonun genişliğini ayarla */
+      height: auto;     
+    }
+
+    /* HOME yazısı */
+    .home-text {
+      display: block;        
+      margin-top: 0px;       /* Logo ile HOME arasında boşluk */
+      font-size: 20px;       
+      color: #f2a69f;        /* HOME yazısı rengi (örnek: sarı) */
+      font-weight: bold;     
+      text-align: center;
+      /* “Stroke” efekti için text-shadow (her tarafta çalışır) */
+      text-shadow:
+ 	  1px 0 0 #b74a40,
+      -1px 0 0 #b74a40,
+ 	  0 1px 0 #b74a40,
+ 	  0 -1px 0 #b74a40;
+    }
+  </style>
+</head>
+<body>
+  <!-- Arka plan resmi -->
+  <div class="bg-image"></div>
+
+  <!-- Sol üstte logo + HOME -->
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="img/addS/logom.png" alt="Logo">
+      <span class="home-text">HOME</span>
+    </a>
+  </div>
+</body>
+</html>
+
